@@ -1,4 +1,4 @@
-const { User } = require('../models');
+const { User } = require('../../models');
 const bcrypt = require('bcrypt');
 
 const authRegisterController = {};
@@ -8,8 +8,10 @@ authRegisterController.register = async (req,res) => {
 
         const { dni, name, surname, password, age, mobile, email, location } = req.body;
 
-        const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-        const isValidEmail = emailRegex.test(email);
+        emailValidation(email);
+
+        // const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        // const isValidEmail = emailRegex.test(email);
 
         const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,15}$/;
         const isValidPassword = passwordRegex.test(password);
