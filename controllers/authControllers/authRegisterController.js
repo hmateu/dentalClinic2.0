@@ -1,18 +1,13 @@
 const { User } = require('../../models');
 const bcrypt = require('bcrypt');
 const emailValidation = require('../../utils/emailValidation');
+const passwordValidation = require('../../utils/passwordValidation');
 
 const authRegisterController = {};
 
 authRegisterController.register = async (req, res) => {
     try {
-
         const { dni, name, surname, password, age, mobile, email, location } = req.body;
-
-        const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,15}$/;
-        const isValidPassword = passwordRegex.test(password);
-
-        console.log(emailValidation(email));
         
         if (!emailValidation(email)) {
             return res.json(
@@ -22,7 +17,8 @@ authRegisterController.register = async (req, res) => {
                 }
             )
         }
-        if (!isValidPassword) {
+
+        if (!passwordValidation(password)) {
             return res.json(
                 {
                     success: true,
