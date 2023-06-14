@@ -1,9 +1,10 @@
 const express = require("express");
+require('dotenv').config();
 const app = express();
-const PORT = 5000;
 const router = require('./router');
 const db = require('./db');
 
+const PORT = process.env.DDBB_PORT;
 app.use(express.json());
 
 app.use(router);
