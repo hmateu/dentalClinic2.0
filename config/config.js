@@ -1,4 +1,4 @@
-{
+const config = {
   "development": {
     "username": "root",
     "password": "root",
@@ -22,3 +22,4 @@
     "dialect": "mysql"
   }
 }
+module.exports = config;
