@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const usersGetAllControllers = require('../controllers/usersControllers/usersGetAllControllers');
+const auth = require('../middlewares/verifyToken');
 
-router.get('/', usersGetAllControllers.getAllUsers);
+router.get('/', auth, usersGetAllControllers.getAllUsers);
 
 module.exports = router;
