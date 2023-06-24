@@ -4,7 +4,7 @@ const app = express();
 const router = require('./router');
 const db = require('./db');
 
-const PORT = process.env.DDBB_PORT;
+const PORT = process.env.DEV_API_PORT;
 app.use(express.json());
 
 app.use(router);
