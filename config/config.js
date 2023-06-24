@@ -1,3 +1,4 @@
+require('dotenv').config();
 const config = {
   "development": {
     "username": process.env.DEV_DDBB_USERNAME,
