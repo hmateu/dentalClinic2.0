@@ -18,4 +18,4 @@ db.then(
 )
     .catch(
         error => console.error(`Ha habido un error conectándose a la base de datos`, error)
-    )
+    );

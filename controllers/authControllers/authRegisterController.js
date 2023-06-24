@@ -13,7 +13,7 @@ authRegisterController.register = async (req, res) => {
             return res.json(
                 {
                     success: true,
-                    message: "Contraseña no válida. Debe tener al menos una letra mayúscula. Debe tener al menos una letra minúscula. Debe tener al menos un número. Debe tener al menos un símbolo (puedes ajustar los símbolos permitidos según tus necesidades). Debe tener una longitud mínima de 8 caracteres. Debe tener una longitud máxima de 15 caracteres."
+                    message: "Contraseña no válida."
                 }
             )
         }

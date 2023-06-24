@@ -25,12 +25,12 @@ authLoginController.login = async (req, res) => {
         }
 
         const isMatch = bcrypt.compareSync(password, user.password);
-        
-        if(!isMatch){
+
+        if (!isMatch) {
             return res.json(
                 {
                     success: true,
-                    message: "Credenciales incorrectas"
+                    message: "Contraseña incorrecta"
                 }
             );
         }
@@ -49,27 +49,16 @@ authLoginController.login = async (req, res) => {
         return res.json(
             {
                 success: true,
-                message: "User Logged",
+                message: "Usuario Logueado",
                 token: token
             }
         );
-
-        if (user.password == password) {
-            return res.json(
-                {
-                    success: true,
-                    message: "Usuario logueado",
-                    token: token
-                }
-            );
-        }
-
     } catch (error) {
         return res.status(500).json(
             {
                 success: false,
                 message: "No puedes loguearte",
-                error: error
+                error: error.message
             }
         )
     }
