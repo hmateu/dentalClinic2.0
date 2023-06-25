@@ -3,6 +3,7 @@ const usersGetAllControllers = require('../controllers/usersControllers/usersGet
 const isDentist = require('../middlewares/isDentist');
 const auth = require('../middlewares/verifyToken');
 
-router.get('/', auth, isDentist, usersGetAllControllers.getAllUsers);
+// router.get('/', auth, isDentist, usersGetAllControllers.getAllUsers);
+router.get('/', usersGetAllControllers.getAllUsers);
 
 module.exports = router;
