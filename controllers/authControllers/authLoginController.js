@@ -1,7 +1,6 @@
 const { User } = require('../../models');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
-const secretCombination = process.env.SECRET_COMBINATION;
 const authLoginController = {};
 
 authLoginController.login = async (req, res) => {
@@ -42,7 +41,7 @@ authLoginController.login = async (req, res) => {
                 roleId: user.role,
                 name: user.name
             },
-            secretCombination,
+            process.env.SECRET_COMBINATION,
             {
                 expiresIn: '3h'
             }

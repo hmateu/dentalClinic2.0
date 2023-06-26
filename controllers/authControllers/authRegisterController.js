@@ -1,4 +1,5 @@
 const { User } = require('../../models');
+require('dotenv').config();
 const bcrypt = require('bcrypt');
 const emailValidation = require('../../utils/validations/emailValidation');
 const passwordValidation = require('../../utils/validations/passwordValidation');
@@ -27,7 +28,7 @@ authRegisterController.register = async (req, res) => {
             )
         }
 
-        const newPassword = bcrypt.hashSync(password, 8);
+        const newPassword = bcrypt.hashSync(password, process.env.BCRYPT_SALT);
 
         const newUser = await User.create(
             {
