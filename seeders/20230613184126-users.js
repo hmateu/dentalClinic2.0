@@ -79,7 +79,7 @@ module.exports = {
         password: bcrypt.hashSync("David1234!", parseInt(process.env.BCRYPT_SALT)),
         age: 35,
         mobile: 631478872,
-        email: "carmen@gmail.com",
+        email: "david@gmail.com",
         location: "Av/Paseo marítimo",
         collegial: null,
         role: 3,
