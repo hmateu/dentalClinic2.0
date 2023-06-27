@@ -11,7 +11,7 @@ authRegisterController.register = async (req, res) => {
         const { dni, name, surname, password, age, mobile, email, location } = req.body;
         
         if (!passwordValidation(password)) {
-            return res.json(
+            return res.status(500).json(
                 {
                     success: true,
                     message: "Contraseña no válida."
@@ -20,7 +20,7 @@ authRegisterController.register = async (req, res) => {
         }
         
         if (!emailValidation(email)) {
-            return res.json(
+            return res.status(500).json(
                 {
                     success: true,
                     message: "Email no válido"

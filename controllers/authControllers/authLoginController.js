@@ -16,7 +16,7 @@ authLoginController.login = async (req, res) => {
         );
 
         if (!user) {
-            return res.json(
+            return res.status(501).json(
                 {
                     success: true,
                     message: "Usuario incorrecto"
@@ -27,7 +27,7 @@ authLoginController.login = async (req, res) => {
         const isMatch = bcrypt.compareSync(password, user.password);
 
         if (!isMatch) {
-            return res.json(
+            return res.status(501).json(
                 {
                     success: true,
                     message: "Contraseña incorrecta"
