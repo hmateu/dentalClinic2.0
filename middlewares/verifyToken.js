@@ -1,4 +1,5 @@
 const jwt = require('jsonwebtoken');
+require('dotenv').config();
 
 const auth = (req, res, next) => {
     try {
@@ -15,7 +16,7 @@ const auth = (req, res, next) => {
 
         const token = bearerToken.split(" ")[1];
 
-        const decoded = jwt.verify(token, 'secreto');
+        const decoded = jwt.verify(token, process.env.SECRET_COMBINATION);
 
         req.userId = decoded.userId;
         req.roleId = decoded.roleId;

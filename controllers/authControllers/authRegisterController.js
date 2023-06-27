@@ -28,7 +28,7 @@ authRegisterController.register = async (req, res) => {
             )
         }
 
-        const newPassword = bcrypt.hashSync(password, process.env.BCRYPT_SALT);
+        const newPassword = bcrypt.hashSync(password, 8);
 
         const newUser = await User.create(
             {
