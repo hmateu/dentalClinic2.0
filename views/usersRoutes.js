@@ -8,8 +8,7 @@ const isAdmin = require('../middlewares/isAdmin');
 const isDentist = require('../middlewares/isDentist');
 const auth = require('../middlewares/verifyToken');
 
-// router.get('/', auth, isDentist, usersGetAllControllers.getAllUsers);
-router.get('/', usersGetAllControllers.getAllUsers);
+router.get('/', auth, isAdmin, usersGetAllControllers.getAllUsers);
 router.get('/perfil', auth, userGetOneController.getOneUser);
 router.get('/patients', auth, usersGetAllPatientsControllers.getAllPatients);
 router.get('/users', auth, usersGetAllUsersExceptAdmin.getAllUsersExceptAdmin);
