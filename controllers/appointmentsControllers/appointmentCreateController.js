@@ -12,9 +12,9 @@ appointmentCreateController.createAppointment = async (req, res) => {
             }
         });
 
-        const defaultDentist = await User.findOne({
+        const assignedUser = await User.findOne({
             where: {
-                id: 1
+                id: 5
             }
         });
 
@@ -22,7 +22,7 @@ appointmentCreateController.createAppointment = async (req, res) => {
             date,
             price: currentService.price,
             assessment: "Pendiente de consulta",
-            dentist: defaultDentist.id,
+            dentist: assignedUser.id,
             patient: patient,
             service,
             payment: 1
