@@ -51,7 +51,7 @@ module.exports = {
         location: "C/Artes escénicas",
         collegial: 390907823,
         role: 2,
-        speciality: 1,
+        speciality: 3,
         createdAt: "2023-05-02 00:00:00",
         updatedAt: "2023-05-02 00:00:00"
       },
@@ -67,7 +67,7 @@ module.exports = {
         location: "C/Arturo Mariano",
         collegial: 464684003,
         role: 2,
-        speciality: 4,
+        speciality: 2,
         createdAt: "2023-05-02 00:00:00",
         updatedAt: "2023-05-02 00:00:00"
       },

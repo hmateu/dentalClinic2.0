@@ -24,25 +24,7 @@ module.exports = {
       },
       {
         id: 4,
-        name: "Periodoncista",
-        createdAt: "2023-05-02 00:00:00",
-        updatedAt: "2023-05-02 00:00:00"
-      },
-      {
-        id: 5,
         name: "Endodoncista",
-        createdAt: "2023-05-02 00:00:00",
-        updatedAt: "2023-05-02 00:00:00"
-      },
-      {
-        id: 6,
-        name: "Patólogo oral",
-        createdAt: "2023-05-02 00:00:00",
-        updatedAt: "2023-05-02 00:00:00"
-      },
-      {
-        id: 7,
-        name: "Prostodoncista",
         createdAt: "2023-05-02 00:00:00",
         updatedAt: "2023-05-02 00:00:00"
       }
