@@ -1,4 +1,5 @@
 const appointmentCreateController = require('../controllers/appointmentsControllers/appointmentCreateController');
+const appointmentFilterByPatientController = require('../controllers/appointmentsControllers/appointmentFilterByPatientController');
 const appointmentGetOneController = require('../controllers/appointmentsControllers/appointmentGetOneController');
 const appointmentGetOnePatientController = require('../controllers/appointmentsControllers/appointmentGetOnePatientController');
 const appointmentUpdateByPatientController = require('../controllers/appointmentsControllers/appointmentUpdateByPatientController');
@@ -11,6 +12,7 @@ const router = require('express').Router();
 router.get('/', auth, isAdmin, appointmentsGetAllController.getAllAppointments);
 router.get('/patient', auth, appointmentGetOnePatientController.getOnePatientAppointments);
 router.get('/dentist', auth, appointmentsGetOneDentistController.getOneDentistAppointments);
+router.get('/filter-by-patient', auth, isAdmin, appointmentFilterByPatientController.filterByPatientAppointments);
 router.post('/', auth, appointmentCreateController.createAppointment);
 router.get('/:id', auth, appointmentGetOneController.getOneAppointment);
 router.put('/:id', auth, appointmentUpdateByPatientController.updateAppointmentByPatient);
