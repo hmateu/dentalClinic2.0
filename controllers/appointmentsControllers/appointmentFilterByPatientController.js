@@ -6,8 +6,9 @@ const appointmentFilterByPatientController = {};
 appointmentFilterByPatientController.filterByPatientAppointments = async (req,res) => {
     try {
         const { patientName } = req.query;
+        console.log(patientName)
 
-        const appointments = await db.sequelize.query(`select a.id , a.date , a.price, a.assessment, ud.name as dentist, up.name as patient, s.name as service, p.name as payment from Appointments a left join Users ud on a.dentist = ud.id left join Users up on a.patient = up.id left join Services s on a.service = s.id left join Payments p on a.payment = p.id where up.name = ${patientName}`, { type: sequelize.QueryTypes.SELECT });
+        const appointments = await db.sequelize.query(`select a.id , a.date , a.price, a.assessment, ud.name as dentist, up.name as patient, s.name as service, p.name as payment from Appointments a left join Users ud on a.dentist = ud.id left join Users up on a.patient = up.id left join Services s on a.service = s.id left join Payments p on a.payment = p.id where up.name like "${patientName}"`, { type: sequelize.QueryTypes.SELECT });
         return res.json(
             {
                 success: true,
