@@ -1,4 +1,4 @@
-# API de una clínica dental
+# API de una clínica dental 2.0
 <details>
   <summary>Contenido 📝</summary>
   <ol>
@@ -16,11 +16,11 @@
 </details>
 
 ## Objetivo
-Esta API la he desarrollado con los conocimientos que he adquirido con el cuarto proyecto de GeeksHub Academy. Con el objetivo de mejorar la anterior API y disponer de un mejor Backend para el siguiente proyecto, <a href="https://github.com/hmateu/frontDentalClinic">su frontend</a>.
+Este proyecto lo he desarrollado con el objetivo de mejorar la <a href="https://github.com/hmateu/dentalClinicProject.git">anterior API que había creado</a> y disponer de un Backend más sólido para el siguiente proyecto, que consiste en desarrollar <a href="https://github.com/hmateu/frontDentalClinic">un frontend para la misma</a>.
 
 ## Sobre el proyecto
-Esta API ha sido desarrollada por **Héctor Mateu**, como mejora del cuarto proyecto del **Bootcamp de Full Stack Developer de Geekshubs Academy**, el cuál se basa en el diseño del backend de una aplicación. El cuál es totalmente funcional y se le puede atacar mediante POSTMAN.
-*Como mejoras de esta API, cabe destacar la utilización de variables de entorno y una mejor practica de abstracción de funciones. Así como una organización de carpetas mucho mejor.*
+Esta API ha sido desarrollada por **Héctor Mateu** como mejora del cuarto proyecto del **Bootcamp de Full Stack Developer de Geekshubs Academy**. Se basa en el diseño del backend de una clínica dental. El cuál es totalmente funcional y se le puede atacar mediante POSTMAN.
+*Como mejoras de esta API, cabe destacar la utilización de variables de entorno y una mejor práctica de abstracción de funciones. Así como una organización de directorios mucho mejor.*
 
 ## Diagrama ER
 ![image](./img/ERDiagram.JPG)
